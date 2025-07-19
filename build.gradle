@@ -11,9 +11,9 @@ buildscript {
         
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.4.2'
+        classpath 'com.android.tools.build:gradle:8.1.4'
 //        4.3.0 gives Merging manifest error
-        classpath 'com.google.gms:google-services:4.2.0'
+        classpath 'com.google.gms:google-services:4.4.0'
         // Should this be 1.26 now?
         classpath 'io.fabric.tools:gradle:1.31.0'  // Crashlytics plugin
 
@@ -25,10 +25,10 @@ buildscript {
 allprojects {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
         maven { url 'https://maven.fabric.io/public' }
         maven { url 'https://jitpack.io' }
-
+        maven { url 'https://repo1.maven.org/maven2/' }
     }
 }
 
