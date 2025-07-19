@@ -31,7 +31,7 @@ import com.google.firebase.FirebaseApp;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.nightonke.jellytogglebutton.JellyToggleButton;
 import com.nightonke.jellytogglebutton.State;
-import com.rbddevs.splashy.Splashy;
+// import com.rbddevs.splashy.Splashy;
 import com.udayraj.omrhelper.constants.SC;
 import com.udayraj.omrhelper.constants.ScanHint;
 import com.udayraj.omrhelper.interfaces.IScanner;
@@ -41,7 +41,7 @@ import com.udayraj.omrhelper.util.SimplePermissions;
 import com.udayraj.omrhelper.util.Utils;
 import com.udayraj.omrhelper.view.Quadrilateral;
 import com.udayraj.omrhelper.view.ScanCanvasView;
-import com.yarolegovich.lovelydialog.LovelyTextInputDialog;
+// import com.yarolegovich.lovelydialog.LovelyTextInputDialog;
 
 import org.opencv.android.CameraBridgeViewBase;
 import org.opencv.android.JavaCameraView;
@@ -101,6 +101,7 @@ public class MainActivity extends AppCompatActivity implements IScanner, CameraB
         super.onCreate(savedInstanceState);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
+        /* Splashy splash screen commented out
         new Splashy(this)
                 .setLogo(R.drawable.splash_guide)
                 .setLogoWHinDp(350,350) // default is 200x200
@@ -114,6 +115,7 @@ public class MainActivity extends AppCompatActivity implements IScanner, CameraB
                 .setFullScreen(true)
                 .setTime(2000)
                 .show();
+        */
 
 
         FirebaseApp.initializeApp(this);
@@ -244,6 +246,7 @@ public class MainActivity extends AppCompatActivity implements IScanner, CameraB
 
                 v.setEnabled(false);
                 v.setClickable(false);
+                /* LovelyTextInputDialog commented out
                 new LovelyTextInputDialog(MainActivity.this, R.style.TintTheme)
                         .setTopColorRes(R.color.dark_gray)
                         .setTitle(R.string.storage_folder)
@@ -286,6 +289,7 @@ public class MainActivity extends AppCompatActivity implements IScanner, CameraB
                             }
                         })
                         .show();
+                */
 
                 v.setEnabled(true);
                 v.setClickable(true);
